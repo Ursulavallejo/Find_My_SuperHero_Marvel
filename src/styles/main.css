@@ -1,0 +1,13 @@
+/* @import '~bootstrap/scss/bootstrap'; */
+
+body {
+  background-color: red;
+  min-height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.main-content {
+  /* min-height: 80vh; */
+  /* margin-bottom: 2em; */
+  margin-bottom: 12em;
+}
