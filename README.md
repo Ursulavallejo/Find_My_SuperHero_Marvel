@@ -26,7 +26,6 @@ This application allows the user to interact with the public Marvel API as follo
      - Full name.
      - Description (or “No description available” if the API returns an empty description).
      - A list of related comics, series, or events associated with the character.
-   - A “Back” button allows returning to the main cards page.
 
 4. **Search for Characters**
 
@@ -44,7 +43,6 @@ This application allows the user to interact with the public Marvel API as follo
    - The user (identified by the name they entered on load) can write a comment for that hero.
    - A counter displays “X comments” and updates automatically whenever a new comment is added.
    - If the user did not enter a name, comments are marked as “Anonymous.”
-   - Comments are stored locally (e.g., in `localStorage`), so they persist on refresh.
 
 ---
 
@@ -56,7 +54,6 @@ This application allows the user to interact with the public Marvel API as follo
 - **Axios** – Promise-based HTTP client for making API requests to the Marvel API.
 - **JavaScript (ES6+)** – Core language for application logic and component scripts.
 - **HTML5 & CSS3** – Markup and styling for responsive, modern layouts.
-- **LocalStorage (Browser API)** – Persistent storage for user comments.
 - **ESLint & Prettier** – Code linting and formatting to enforce consistency and best practices.
 - **dotenv** (Vite’s environment handling) – Securely manage Marvel API keys via `.env` files.
 - **Git & GitHub** – Version control and repository hosting.
@@ -110,7 +107,7 @@ This application allows the user to interact with the public Marvel API as follo
 
 ---
 
-## 🔧 Installation and Usage
+### 🔧 Installation and Usage
 
 1.  **Clone or download** the project folder
 
@@ -155,7 +152,7 @@ This application allows the user to interact with the public Marvel API as follo
 
 ---
 
-## 📝 Additional Notes
+### 📝 Additional Notes
 
 - The Marvel API returns paginated results. For the initial display, limit the request to 14 characters. In the search, use `limit=10` to avoid overloading the UI.
 - The comment counter updates in real time thanks to Vue’s reactivity.
