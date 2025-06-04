@@ -6,6 +6,10 @@
 
 Marvel App is a Vue 3 single-page application built with Vite that lets users explore Marvel characters via the official Marvel API. Upon entering their name, users see a personalized greeting and a grid of 14 featured superhero cards. They can click any card to view detailed information fetched by character ID, including images, descriptions, and related comics or events. A search field (powered by Axios) returns up to 10 matching characters with thumbnails, basic info, and links to the Marvel website, accompanied by a loading animation during requests. Each character detail view also supports adding comments—automatically tagged with the user’s name (or “Anonymous” if none was provided)—and displays an updated comment count. The app demonstrates core Vue concepts (reactivity, computed properties, watchers), Vue Router for dynamic routes (/detail/:id), and component-based architecture with prop validation.
 
+
+https://github.com/user-attachments/assets/c98a6e04-e574-4b0f-914a-4c0b7f035321
+
+
 This application allows the user to interact with the public Marvel API as follows:
 
 1. **Personalization on Load**
