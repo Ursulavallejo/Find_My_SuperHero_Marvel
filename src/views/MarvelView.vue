@@ -11,9 +11,13 @@ export default {
     userProp: String,
   },
   created() {
-    axios(
-      'https://gateway.marvel.com/v1/public/characters?ts=1&apikey=8104150c071ae724664587cc892ac68f&hash=da2e861faf5b55afaf8f3339a879117c'
-    )
+    axios
+      .get(
+        `https://gateway.marvel.com/v1/public/characters` +
+          `?ts=${import.meta.env.VITE_MARVEL_TS}` +
+          `&apikey=${import.meta.env.VITE_MARVEL_PUBLIC_KEY}` +
+          `&hash=${import.meta.env.VITE_MARVEL_HASH}`
+      )
       .then((result) => {
         // Filter out characters with the generic thumbnail
         this.initialCharacters = result.data.data.results
@@ -37,7 +41,12 @@ export default {
       this.loading = true
 
       fetch(
-        `https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=8104150c071ae724664587cc892ac68f&hash=da2e861faf5b55afaf8f3339a879117c&nameStartsWith=${this.nameCharacter}`
+        `https://gateway.marvel.com/v1/public/characters` +
+          `?ts=${import.meta.env.VITE_MARVEL_TS}` +
+          `&apikey=${import.meta.env.VITE_MARVEL_PUBLIC_KEY}` +
+          `&hash=${import.meta.env.VITE_MARVEL_HASH}&nameStartsWith=${
+            this.nameCharacter
+          }`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -170,7 +179,7 @@ export default {
             >
           </li>
         </ul>
-        <div v-if="searchPerformed">
+        <div v-if="searchPerformed && characters.length === 0">
           <p>No matching characters found.</p>
         </div>
       </section>

@@ -29,7 +29,10 @@ export default {
       if (this.selectedCharacterId) {
         axios
           .get(
-            `https://gateway.marvel.com/v1/public/characters/${this.selectedCharacterId}?ts=1&apikey=8104150c071ae724664587cc892ac68f&hash=da2e861faf5b55afaf8f3339a879117c`
+            `https://gateway.marvel.com/v1/public/characters` +
+              `?ts=${import.meta.env.VITE_MARVEL_TS}` +
+              `&apikey=${import.meta.env.VITE_MARVEL_PUBLIC_KEY}` +
+              `&hash=${import.meta.env.VITE_MARVEL_HASH}`
           )
           .then((result) => {
             // console.log(result.data.data.results[0])
