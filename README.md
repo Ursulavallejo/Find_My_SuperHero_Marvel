@@ -70,25 +70,25 @@ This application allows the user to interact with the public Marvel API as follo
 
 <img
   src="documentation/landingPageView_NoUser.png"
-  alt="landing-page-image"
+  alt="landing-page-anonym-image"
   width="400"
 />
 
 <img
   src="documentation/landingPageView_user_menu.png"
-  alt="landing-page-image"
+  alt="landing-page-user-image"
   width="400"
 />
 
 <img
   src="documentation/mainPageView.png"
-  alt="landing-page-image"
+  alt="main-page-image"
   width="300"
 />
 
 <img
   src="documentation/cardIdView.png"
-  alt="landing-page-image"
+  alt="hero-card-id-image"
   width="300"
 />
 
@@ -105,7 +105,7 @@ This application allows the user to interact with the public Marvel API as follo
 
 <img
   src="documentation/searchResultsView.png"
-  alt="landing-page-image"
+  alt="search-page-image"
   width="300"
 />
 
